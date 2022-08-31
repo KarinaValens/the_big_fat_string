@@ -45,11 +45,15 @@ function inputFunt() {
             //3.- If input is a full name: Find the length of the first name
             outputfield.value = inputfield.substring(0, inputfield.indexOf(" ")).length;
             break
+        case "4":
+            chosen === 4;
+            //4.- If input is a full name: Find the middle name start and end position, and the middle name itself in a fullname string
+            outputfield.value = (`${inputfield.indexOf(" ")+1} - ${inputfield.lastIndexOf(" ")-1} = ${inputfield.substring((inputfield.indexOf(" ")+1),inputfield.lastIndexOf(" "))}`);
+            break
     }
     /*             
    
-    <option value="4">4.- If input is a full name: Find the middle name start and end position,<br> and the
-                middle name itself in a fullname string</option>
+    <option value="4"></option>
     <option value="5">5.- If input is a filename: Check if a filename is .png or .jpg</option>
     <option value="6">6.- If input is a password: Hide a password with the correct number of *s</option>
     <option value="7">7.- With any input: Make the third character uppercase</option>
