@@ -22,12 +22,6 @@ function inputFunt() {
     inputfield = document.querySelector("#input").value;
     chosen = options.value;
 
-
-    /* if (chosen == "1") {
-        outputfield.value = inputfield[0].toUpperCase() + inputfield.substring(1).toLowerCase() ||
-            inputfield[0].toUpperCase() + inputfield.substring(1, inputfield.indexOf(" ")).toLowerCase();
-    } */
-
     switch (chosen) {
         case "1":
             chosen === 1;
