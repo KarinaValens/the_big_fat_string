@@ -58,26 +58,14 @@ function inputFunt() {
         case "7":
             chosen === 7;
             //7.- With any input: Make the third character uppercase
-            outputfield.value = inputfield[3].toUpperCase()
-            //1.- If input is a first name: Make the first character in a name uppercase, and the rest lowercase
-            outputfield.value = replace(inputfield[2], inputfield[2].toUpperCase());
-            //can i use an array method here?
+            outputfield.value = inputfield.substring(0, 2).toLowerCase() + inputfield.substring(2, 3).toUpperCase() + inputfield.substring(3).toLowerCase()
             break
         case "8":
             chosen === 8;
             //8.- With any input: Make a character uppercase, if it follows a space or a hyphen
-            //outputfield.value = inputfield.substring(0, inputfield.indexOf(" ")).length;
-
+            /* is solfe with for loop => array.forEach(element => {
+}); */
             break
     }
 
 }
-
-
-
-
-//the last item is solfe with for loop
-
-/* array.forEach(element => {
-
-}); */
