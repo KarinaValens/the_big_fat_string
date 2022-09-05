@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", init);
 
 
 let inputfield;
+let currentChar;
+let previousChar;
 let outputfield = document.querySelector("#output");
 const btn = document.querySelector("#button");
 
@@ -63,8 +65,16 @@ function inputFunt() {
         case "8":
             chosen === 8;
             //8.- With any input: Make a character uppercase, if it follows a space or a hyphen
-            /* is solfe with for loop => array.forEach(element => {
-}); */
+            outputfield.value = inputfield.substring(0, 1).toUpperCase(); //capitalize the first letter
+            for (let i = 1; i < inputfield.length; i++) {
+                previousChar = inputfield[i - 1]; //we the string "0"(i-1) to just determine where we start
+                if (previousChar === " " || previousChar === "-") { //if the letter that follows an empty space or an -
+                    currentChar = inputfield[i].toUpperCase(); //then gives it a value equal to an inputfield and capitalize it 
+                } else {
+                    currentChar = inputfield[i].toLowerCase();; //if it doesnt follow an space or an hyphen left it as it is
+                }
+                outputfield.value += currentChar; //we concatenate the results
+            }
             break
     }
 
